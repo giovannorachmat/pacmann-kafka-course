@@ -9,11 +9,12 @@ Short course on how to setup Kafka, create topics, and basic Kafka stuffs
 
 ## Create a topic
 Run `./bin/kafka-topics.sh --bootstrap-server <host>:<port> --create --topic {topic_name}`
+
 For multiple topics, consider using Kubernetes or Terraform. One way to do it is probably like [this](https://stackoverflow.com/questions/43115759/how-to-create-a-list-of-topics-in-apache-kafka-using-single-command) 
 
 ## Delete topic(s)
-Run `./bin/kafka-topics.sh --bootstrap-server <host>:<port> --delete --topic {topic_name}`
-Run `./bin/kafka-topics.sh --bootstrap-server <host>:<port> --delete --topic {topic_name_1},{topic_name_2}`
+1. Run `./bin/kafka-topics.sh --bootstrap-server <host>:<port> --delete --topic {topic_name}`
+2. Run `./bin/kafka-topics.sh --bootstrap-server <host>:<port> --delete --topic {topic_name_1},{topic_name_2}`
 
 ## List topics
 Run `./bin/kafka-topics.sh --bootstrap-server <host>:<port> --list`
